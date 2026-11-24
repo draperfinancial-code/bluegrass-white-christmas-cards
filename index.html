@@ -127,11 +127,11 @@
 .preview-card{cursor:pointer;margin:10px 8px 10px 0;background:#143a38!important;color:#fff1c9!important;border:1px solid #d3ad66!important}
 #previewModal[hidden]{display:none!important}
 #previewModal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.91);display:flex;align-items:center;justify-content:center;padding:18px;box-sizing:border-box}
-.preview-wrap{width:min(920px,96vw);height:min(82vh,850px);position:relative;background:#071827;border:2px solid #d8b976;border-radius:12px;overflow:hidden}
-.preview-wrap iframe{width:100%;height:100%;border:0}
+.preview-wrap{width:min(920px,96vw);height:min(82vh,850px);position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;background:#071827;border:2px solid #d8b976;border-radius:12px;overflow:hidden}
+.preview-wrap iframe{display:block;width:100%;height:100%;min-height:0;border:0}
 .preview-mark{pointer-events:none;position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;opacity:.65}
 .preview-mark span{transform:rotate(-24deg);font:bold clamp(26px,5vw,65px) system-ui;color:#fff;text-shadow:2px 2px 12px #000,-2px -2px 12px #000;text-align:center;letter-spacing:.09em}
-.preview-bottom{pointer-events:none;position:absolute;bottom:0;left:0;right:0;z-index:2;text-align:center;background:#091a2cdd;color:#ffdc8b;padding:10px;font:600 14px system-ui}
+.preview-bottom{position:relative;z-index:2;text-align:center;background:#091a2cdd;color:#ffdc8b;padding:10px;font:600 14px system-ui}
 .preview-close{position:absolute;right:18px;top:12px;z-index:4;background:#f1d18d;color:#132638;border:0;border-radius:6px;padding:10px 16px;font:bold 17px system-ui;cursor:pointer}
 </style>
 <div id="previewModal" hidden role="dialog" aria-modal="true" aria-label="Christmas card full preview"><button class="preview-close" id="previewClose">✕ Close Preview</button><div class="preview-wrap"><iframe id="previewFrame" title="Christmas card preview" allow="autoplay; fullscreen" referrerpolicy="no-referrer"></iframe><div class="preview-mark" aria-hidden="true"><span>PREVIEW ONLY<br>COMING HOME FOR CHRISTMAS</span></div><div class="preview-bottom">Love this greeting? Close the preview and select Personalize &amp; Send — Just $4.95</div></div></div>
